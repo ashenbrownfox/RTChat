@@ -23,5 +23,26 @@
 	
 	</div>
 	<script src="http://127.0.0.1:8080/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		(function(){
+			var getNode = function(s){
+				return document.querySelector(s);
+			},
+			//get Required Nodes
+			textarea = getNode('.chat-textarea'),
+			chatName = getNode('.chat-name');
+			try{
+				var socket = io.connect('http://127.0.0.1:3000');
+
+			} catch(e){
+				//set status to warn User
+			}
+			if(socket != undefined){
+				console.log("Ok!")
+			}
+
+		})();
+
+	</script>
 </body>
 </html>
